@@ -1,4 +1,4 @@
-package com.horch.ASV.StartPoint;
+package com.horch.ASV.businessLogic.StartPoint;
 
 import com.horch.ASV.businessLogic.implamentation.ConfigEnterFiller;
 import com.horch.ASV.businessLogic.interfaces.IConfigEnterFiller;

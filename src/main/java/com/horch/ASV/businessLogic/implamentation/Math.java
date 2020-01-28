@@ -16,6 +16,6 @@ public class Math implements IMath {
 
     @Override
     public void Formula() {
-    iConfigEnterData.getResult() =
+    iConfigEnterData.getResult();
     }
 }
