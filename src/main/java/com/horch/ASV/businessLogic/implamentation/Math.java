@@ -13,9 +13,8 @@ public class Math implements IMath {
         
     }
 
-
     @Override
-    public void Formula() {
-    iConfigEnterData.getResult();
+    public double runFormula() {
+        return iConfigEnterData.getResult();
     }
 }
