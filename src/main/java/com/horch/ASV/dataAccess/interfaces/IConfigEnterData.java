@@ -7,22 +7,29 @@ public interface IConfigEnterData {
     public void setPatm(float Patm);
     public void setTc(float Tc);
     public void setga(float ga);
-    public void setVwx(float Vwx);
-    public void setVwy(float Vwx);
+    public void setVw(float Vw);
     public void setQ(float Q);
-    public void setResult(float nextFloat);
+    public void setLcgrad(float nextFloat);
+    public void setdk(float dk);
+    public  void setzp(float zp);
+    public int Tsk = 273;
 
+
+
+    public void setResult(float nextFloat);
     public float getMsn();
     public float getSx();
     public float getV0();
     public float getPatm();
     public float getTc();
     public float getga();
-    public float getVwx();
-    public float getVwy();
+    public float getVw();
     public float getQ();
+    public float getLcgrad();
+    public int getTsk();
+    public float getdk();
+    public float getzp();
+
     public float getResult();
-
-
 }
 

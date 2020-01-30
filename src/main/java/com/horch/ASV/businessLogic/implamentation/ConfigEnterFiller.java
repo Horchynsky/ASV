@@ -49,21 +49,34 @@ public class ConfigEnterFiller implements IConfigEnterFiller {
         configEnterData.setga(scan.nextFloat());
     }
 
-    @Override
-    public void EnterVwx() {
-        System.out.print("Введіть швидкість вітру на осі у: ");
-        configEnterData.setVwx(scan.nextFloat());
-    }
 
     @Override
-    public void EnterVwy() {
-        System.out.print("Введіть швидкість вітру на осі х: ");
-        configEnterData.setVwy(scan.nextFloat());
+    public void EnterVw() {
+        System.out.print("Введіть швидкість вітру: ");
+        configEnterData.setVw(scan.nextFloat());
     }
 
     @Override
     public void EnterQ() {
 
+    }
+
+    @Override
+    public void EnterLcgrd() {
+
+    System.out.print("Введіть кут цілі в градусах: ");
+    configEnterData.setLcgrad(scan.nextFloat());
+    }
+
+    @Override
+    public void Enterdc() {
+
+    }
+
+    @Override
+    public void Enterdk() {
+        System.out.print("Введіть діаметр кулі:");
+        configEnterData.setdk(scan.nextFloat());
     }
 
     @Override
@@ -74,6 +87,16 @@ public class ConfigEnterFiller implements IConfigEnterFiller {
     @Override
     public void Result() {
 
+    }
+
+    @Override
+    public void EnterTsk() {
+        System.out.print("Tемпература в кельвінах = ");
+        configEnterData.getTsk();
+    }
+    public void Enterzp(){
+        System.out.print("Висота над рівнем моря = ");
+        configEnterData.getzp();
     }
 
     @Override

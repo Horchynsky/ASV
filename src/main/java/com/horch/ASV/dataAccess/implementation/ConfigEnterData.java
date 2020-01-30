@@ -9,10 +9,12 @@ public class ConfigEnterData implements IConfigEnterData {
     float Patm;//Атмосферний тиск
     float Tc;//Температура повітря в градусах Цельсія
     float ga = 9.81f;
-    float Vwy;//Швидкість вітру
-    float Vwx;//Швидкість вітру
+    float Vw;//видкість вітру
     float Q;// кут під яким вилітає снаряд
-    float Result;
+    float Result;// результат формули
+    float Lcgrad;
+    float dk;//діаметр снаряду
+    float zp;// висота над рівнем моря
 
 
     @Override
@@ -46,18 +48,27 @@ public class ConfigEnterData implements IConfigEnterData {
     }
 
     @Override
-    public void setVwx(float Vwx) {
-        this.Vwx = Vwx;
-    }
-
-    @Override
-    public void setVwy(float Vwx) {
-        this.Vwy = Vwx;
+    public void setVw(float Vw) {
+        this.Vw = Vw;
     }
 
     @Override
     public void setQ(float Q) {
         this.Q = Q;
+    }
+
+    @Override
+    public void setLcgrad(float Lcgrad) { this.Lcgrad = Lcgrad;
+    }
+
+    @Override
+    public void setdk(float dk) {
+        this.dk = dk;
+    }
+
+    @Override
+    public void setzp(float zp) {
+        this.zp=zp;
     }
 
     @Override
@@ -96,18 +107,33 @@ public class ConfigEnterData implements IConfigEnterData {
     }
 
     @Override
-    public float getVwx() {
-        return this.Vwx;
-    }
-
-    @Override
-    public float getVwy() {
-        return this.Vwy;
+    public float getVw() {
+        return this.Vw;
     }
 
     @Override
     public float getQ() {
         return this.Q;
+    }
+
+    @Override
+    public float getLcgrad() {
+        return this.Lcgrad;
+    }
+
+    @Override
+    public int getTsk() {
+        return  this.Tsk;
+    }
+
+    @Override
+    public float getdk() {
+        return 0;
+    }
+
+    @Override
+    public float getzp() {
+        return this.zp;
     }
 
 
@@ -129,9 +155,9 @@ public class ConfigEnterData implements IConfigEnterData {
                 ", Patm=" + Patm +
                 ", Tc=" + Tc +
                 ", ga=" + ga +
-                ", Vwy=" + Vwy +
-                ", Vwx=" + Vwx +
+                ", Vw=" + Vw +
                 ", Q=" + Q +
+                ", Lcgrad = "+ Lcgrad+
                 '}';
     }
 }

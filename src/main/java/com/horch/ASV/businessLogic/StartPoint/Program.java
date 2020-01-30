@@ -10,6 +10,7 @@ import com.horch.ASV.dataAccess.interfaces.IConfigEnterData;
 public class Program implements IProgram {
 
     private IMath plusFormula;
+    private IMath ZP;
 
     @Override
     public void run() {
@@ -19,17 +20,25 @@ public class Program implements IProgram {
         iConfigEnterFiller.EnterSx();
         iConfigEnterFiller.EnterV0();
         iConfigEnterFiller.EnterPatm();
-        iConfigEnterFiller.EnterVwy();
-        iConfigEnterFiller.EnterVwx();
+        iConfigEnterFiller.EnterVw();
         iConfigEnterFiller.EnterTc();
+        iConfigEnterFiller.EnterTsk();
 
         IConfigEnterData configEnterData = iConfigEnterFiller.getConfigEnterData();
 //        System.out.println(configEnterData.toString());
 
-        plusFormula = new FormulaMock(configEnterData.getSx(), configEnterData.getV0());
+        plusFormula = new FormulaMock(configEnterData.getTc(), configEnterData.getTsk());
         double plusFormulaResult = plusFormula.runFormula();
         System.out.println(plusFormulaResult);
+
+        float configEnterDataget;
+        plusFormula = new FormulaMock(configEnterData.getTc() + configEnterData.getTsk());
+
+        ZP = new FormulaMock(configEnterData.getPatm());
+        double ZPResult = ZP.runZp();
+        System.out.println(ZPResult);
     }
+
 
     private  IConfigEnterFiller iConfigEnterFiller;
 
