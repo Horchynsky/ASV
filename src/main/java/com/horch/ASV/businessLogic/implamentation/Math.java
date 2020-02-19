@@ -17,10 +17,4 @@ public class Math implements IMath {
     public double runFormula() {
         return iConfigEnterData.getResult();
     }
-
-    @Override
-    public double runZp() {
-        return iConfigEnterData.getzp();
-    }
-
 }

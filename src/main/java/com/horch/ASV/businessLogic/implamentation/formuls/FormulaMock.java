@@ -28,10 +28,10 @@ public class FormulaMock implements IMath {
         return firstNum + secondNum;
     }
 
-    @Override
-    public double runZp() {
-        return (288000 / 6.5 * (1 - Math.pow((Patm / 760), (1 / 5.255))));
-    }
+//    @Override
+//    public double runZp() {
+//        return (288000 / 6.5 * (1 - Math.pow((Patm / 760), (1 / 5.255))));
+//    }
 
     public float getFirstNum() {
         return firstNum;

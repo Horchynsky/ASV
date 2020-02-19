@@ -86,13 +86,13 @@ public class ConfigEnterFiller implements IConfigEnterFiller {
 
     @Override
     public void Result() {
-
+        //TODO why it is empty
     }
 
     @Override
     public void EnterTsk() {
         System.out.print("Tемпература в кельвінах = ");
-        configEnterData.getTsk();
+        configEnterData.getTSK();
     }
     public void Enterzp(){
         System.out.print("Висота над рівнем моря = ");

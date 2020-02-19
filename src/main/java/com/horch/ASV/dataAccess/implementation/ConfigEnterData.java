@@ -15,11 +15,12 @@ public class ConfigEnterData implements IConfigEnterData {
     float Lcgrad;
     float dk;//діаметр снаряду
     float zp;// висота над рівнем моря
+    int TSK;
 
 
     @Override
-    public void setMsn(float Msn) {this.Msn = Msn;
-
+    public void setMsn(float Msn) {
+        this.Msn = Msn;
     }
 
     @Override
@@ -58,7 +59,8 @@ public class ConfigEnterData implements IConfigEnterData {
     }
 
     @Override
-    public void setLcgrad(float Lcgrad) { this.Lcgrad = Lcgrad;
+    public void setLcgrad(float Lcgrad) {
+        this.Lcgrad = Lcgrad;
     }
 
     @Override
@@ -68,12 +70,27 @@ public class ConfigEnterData implements IConfigEnterData {
 
     @Override
     public void setzp(float zp) {
-        this.zp=zp;
+        this.zp = zp;
+    }
+
+    @Override
+    public int getKelvinCof() {
+        return 273;
+    }
+
+    @Override
+    public int getTSK() {
+        return this.TSK;
+    }
+
+    @Override
+    public void setTSK(int TSK) {
+        this.TSK = TSK;
     }
 
     @Override
     public void setResult(float Result) {
-        this.Result=Result;
+        this.Result = Result;
     }
 
     @Override
@@ -122,11 +139,6 @@ public class ConfigEnterData implements IConfigEnterData {
     }
 
     @Override
-    public int getTsk() {
-        return  this.Tsk;
-    }
-
-    @Override
     public float getdk() {
         return 0;
     }
@@ -157,7 +169,7 @@ public class ConfigEnterData implements IConfigEnterData {
                 ", ga=" + ga +
                 ", Vw=" + Vw +
                 ", Q=" + Q +
-                ", Lcgrad = "+ Lcgrad+
+                ", Lcgrad = " + Lcgrad +
                 '}';
     }
 }
