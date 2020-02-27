@@ -3,20 +3,22 @@ package com.horch.ASV.dataAccess.implementation;
 import com.horch.ASV.dataAccess.interfaces.IConfigEnterData;
 
 public class ConfigEnterData implements IConfigEnterData {
+    //Вхідні дані з консолі
     float Msn;// маса снаряду
     float Sx;//Площа поперечного перерізу
     float V0;//Початкова швидкість снаряду
     float Patm;//Атмосферний тиск
     float Tc;//Температура повітря в градусах Цельсія
-    float ga = 9.81f;
-    float Vw;//видкість вітру
+    float Vw;//швидкість вітру
     float Q;// кут під яким вилітає снаряд
+
+    // Дані які знаходимо
     float Result;// результат формули
-    float Lcgrad;
+    float Lcgrad;//
     float dk;//діаметр снаряду
     float zp;// висота над рівнем моря
-    int TSK;
-
+    int TSK;//Температура в кельвінах
+    float ga = 9.81f;
 
     @Override
     public void setMsn(float Msn) {
@@ -152,6 +154,11 @@ public class ConfigEnterData implements IConfigEnterData {
     @Override
     public float getResult() {
         return this.Result();
+    }
+
+    @Override
+    public double getP() {
+        return 3.14;
     }
 
     private float Result() {

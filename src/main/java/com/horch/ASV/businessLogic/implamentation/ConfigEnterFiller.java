@@ -16,13 +16,11 @@ public class ConfigEnterFiller implements IConfigEnterFiller {
     @Override
     public void EnterMsn() {
         System.out.print("Введіть масу снаряду: ");
-        configEnterData.setMsn(scan.nextInt());
+        configEnterData.setMsn(scan.nextFloat());
     }
 
     @Override
     public void EnterSx() {
-        System.out.print("Введіть площу поперечного перерізу снаряду: ");
-        configEnterData.setSx(scan.nextFloat());
     }
 
     @Override
@@ -91,12 +89,7 @@ public class ConfigEnterFiller implements IConfigEnterFiller {
 
     @Override
     public void EnterTsk() {
-        System.out.print("Tемпература в кельвінах = ");
-        configEnterData.getTSK();
-    }
-    public void Enterzp(){
-        System.out.print("Висота над рівнем моря = ");
-        configEnterData.getzp();
+        //TODO why it is empty
     }
 
     @Override

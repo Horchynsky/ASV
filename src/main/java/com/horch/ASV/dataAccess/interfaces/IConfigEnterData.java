@@ -55,5 +55,7 @@ public interface IConfigEnterData {
     public float getzp();
 
     public float getResult();
+
+    double getP();
 }
 
